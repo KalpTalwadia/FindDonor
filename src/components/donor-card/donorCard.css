@@ -1,0 +1,32 @@
+.Card_Container{
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: space-between;
+    border:2px solid #8a0303;
+    border-radius: 3px;
+}
+.Left_Container{
+    flex:0.2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#8a0303;
+    color:white;
+}
+.Middle_Container{
+    flex:0.5;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Right_Container{
+    flex:0.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8a0303;
+    cursor: pointer;
+}
+

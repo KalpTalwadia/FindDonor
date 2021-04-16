@@ -1,0 +1,28 @@
+.Header_Search{
+    display: flex;
+    width:60%;
+    border-radius:6px;
+    background-color:#1c2237;
+    display:flex;
+    padding:0 50px;
+    color:white;
+    border:1px solid gray;
+    margin: 20px auto;
+    height:50px;
+    justify-items: center;
+    align-items: center;
+}
+.Header_Search input{
+    font-size: 32px;
+    height: 100%;
+    background-color:transparent;
+    border:none;
+    text-align:center;
+    min-width:30vw;
+    color:white;
+    outline:none
+}
+
+.Header_Search .MuiSvgIcon-root{
+    color:white
+}
