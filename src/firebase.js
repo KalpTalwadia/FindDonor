@@ -1,4 +1,6 @@
 import Firebase from 'firebase'
+import 'firebase/auth'
+
 var firebaseConfig = {
   apiKey: "AIzaSyAqeHgzuwz8588CsMXzX5E2qjhL36josMQ",
   authDomain: "finddonor-1b80a.firebaseapp.com",
@@ -9,7 +11,7 @@ var firebaseConfig = {
 };
 const firebase= Firebase.initializeApp(firebaseConfig);
 
-const  db = firebase.firestore();
+export const  db = firebase.firestore();
+export const auth = firebase.auth();
 
-export {db}
 export default firebase
