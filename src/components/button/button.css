@@ -1,5 +1,5 @@
 :root{
-    --primary:#fff
+    --primary:#242424
 }
 
 .btn{
@@ -20,8 +20,9 @@
     background-color: transparent;
     color:#FFF;
     padding:8px 20px;
-    border:1px solid var(--primary);
+    border:1px solid red;
     transition:all 0.3s ease-out;
+    border:1px solid var(--primary)
 }
 
 .btn--medium{
@@ -87,12 +88,12 @@
 .primary{
     background-color: #242424;
     color:#fff;
-    border:none;
+
 }
 .primary:hover{
     background-color: #fff;
     color:#242424;
-    border:none;
+   
 }
 .green{
     background-color: #25ce4a;

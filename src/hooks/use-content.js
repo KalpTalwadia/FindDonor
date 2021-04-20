@@ -6,7 +6,9 @@ export default function useContent(target,city) {
 
   useEffect(() => {
       if(city==='')
-      {return}
+      {
+        return
+      }
       const query= db
       .collection("donor").where('city','==',city.toUpperCase())
     query.onSnapshot(querySnapshot=>{

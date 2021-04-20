@@ -1,0 +1,91 @@
+.Condition_Card{
+    border: 2px solid black;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 40px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.Condition_Card ul{
+    font-size: 24px;
+}
+.Condition_Card li{
+    font-size: 18px;
+}
+
+.Form_Container{
+    display: flex;
+    flex-direction: row;
+    width:80vw;
+    margin: 20px auto;
+    border:2px solid black;
+    padding:10px;
+    border-radius: 4px;
+  
+}
+.Personal_Details{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex: 0.3;
+}
+.Report{
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.Form_Container form p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 32px;
+}
+.Form_Container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border-right: 2px solid black;
+    padding: 10px 20px;
+   
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 575px) and (max-width: 767px) {
+}
+@media (min-width: 480px) and (max-width: 574px) {
+}
+@media (max-width: 479px) {
+    .Form_Container{
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        margin: 20px auto;
+        border:2px solid black;
+        padding:10px;
+        border-radius: 4px;
+        
+    }
+
+    .Form_Container form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        border-right: none;
+        border-bottom: 2px solid black;
+        padding: 10px 20px;
+       
+    }
+   
+}
+
