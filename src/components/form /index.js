@@ -3,12 +3,11 @@ import React,{useState,useCallback} from 'react'
 import './form.css'
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {Button} from '../button/index'
 import {useDropzone} from 'react-dropzone'
-
+import {useAuth} from '../../context/firebase-context'
 const useStyles = makeStyles((theme) => ({
     root: {
     
@@ -34,19 +33,27 @@ export default function Form() {
     const [bloodGroup, setBloodGroup] = useState('');
     const [date, setDate] = useState('');
     const [files,setFiles]= useState();
+    const [password, setPassword] = useState('')
     const onDrop = useCallback(acceptedFiles => {
       setFiles(acceptedFiles);
     }, [])
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
-  
+    const {signup} =useAuth();
+    const isInvalid = name === '' || email === '' || city === '' || number==='' || bloodGroup ==='-1' || date=== '' || password==='';
+
     const validateForm=(event)=>{
-      event.preventDefault()
-      console.log("name",name);
-      console.log("email",email);
-      console.log("city",city);
-      console.log("number",number);
-      console.log("bloodGroup",bloodGroup);
-      console.log("date",date);
+        event.preventDefault();
+        const user={
+          'name':name,
+          'email':email,
+          'city':city,
+          'bloodGroup':bloodGroup,
+          'password':password,
+          'date':date,
+        }
+        signup(user).then(console.log("success")).catch((error)=>console.log(error.message));
+        
+       
     }
 
     return (
@@ -83,6 +90,13 @@ export default function Form() {
                 variant="outlined" 
                 required
                 onChange={e=>(setEmail(e.target.value))}
+                margin="normal"
+            />
+               <TextField 
+                label="Password" 
+                variant="outlined" 
+                required
+                onChange={e=>(setPassword(e.target.value))}
                 margin="normal"
             />
             <TextField 
