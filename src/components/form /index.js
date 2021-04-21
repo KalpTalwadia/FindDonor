@@ -76,84 +76,86 @@ export default function Form() {
             <div className="Personal_Details">
         
             <form className={classes.root} onSubmit={validateForm}>
-            <p>Register as a donor</p>
-            <TextField  
-                label="Name" 
-                variant="outlined" 
-                size="medium" 
-                required
-                onChange={e=>(setName(e.target.value))}
-                margin="normal"
-            />
-            <TextField 
-                label="Email" 
-                variant="outlined" 
-                required
-                onChange={e=>(setEmail(e.target.value))}
-                margin="normal"
-            />
-               <TextField 
-                label="Password" 
-                variant="outlined" 
-                required
-                onChange={e=>(setPassword(e.target.value))}
-                margin="normal"
-            />
-            <TextField 
-                label="City" 
-                variant="outlined" 
-                size="medium" 
-                required
-                onChange={e=>(setCity(e.target.value))}
-                margin="normal"
-            />
-            <TextField
-                label="Mobile Number"
-                InputProps={{
-                    startAdornment:<InputAdornment position="start">+91</InputAdornment>
-                }}
-                variant="outlined"
-                onChange={e=>(setNumber(e.target.value))}
-                margin="normal"
-            />
+              <p>Register as a donor</p>
+              <TextField  
+                  label="Name" 
+                  variant="outlined" 
+                  size="medium" 
+                  required
+                  onChange={e=>(setName(e.target.value))}
+                  margin="normal"
+              />
+              <TextField 
+                  label="Email" 
+                  variant="outlined" 
+                  required
+                  onChange={e=>(setEmail(e.target.value))}
+                  margin="normal"
+              />
+                <TextField 
+                  label="Password" 
+                  variant="outlined" 
+                  required
+                  onChange={e=>(setPassword(e.target.value))}
+                  margin="normal"
+              />
+              <TextField 
+                  label="City" 
+                  variant="outlined" 
+                  size="medium" 
+                  required
+                  onChange={e=>(setCity(e.target.value))}
+                  margin="normal"
+              />
+              <TextField
+                  label="Mobile Number"
+                  InputProps={{
+                      startAdornment:<InputAdornment position="start">+91</InputAdornment>
+                  }}
+                  variant="outlined"
+                  onChange={e=>(setNumber(e.target.value))}
+                  margin="normal"
+              />
 
-        
-      <FormControl variant="outlined" className={classes.formControl}>
-      <InputLabel id="demo-simple-select-outlined-label">Blood Group</InputLabel>
-      <Select
-        labelId="demo-simple-select-outlined-label"
-        id="demo-simple-select-outlined"
-        label="Blood Group"
-        required={true}
-        onChange={e=>(setBloodGroup(e.target.value))}
-        margin="normal"
-      >
-          <MenuItem value="-1">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value="A+">A+</MenuItem>
-          <MenuItem value="A-">A-</MenuItem>
-          <MenuItem value="B+">B+</MenuItem>
-          <MenuItem value="O+">O+</MenuItem>
-          <MenuItem value="O-">O-</MenuItem>
-          <MenuItem value="AB+">AB+</MenuItem>
-          <MenuItem value="AB-">AB-</MenuItem>
-        </Select>
-      </FormControl>
-            <TextField
-                id="date_negative"
-                type="date"
-                label="Date last negative"
-                defaultValue="2017-05-24"
-                InputLabelProps={{
-                shrink: true,
-                }}
-                onChange={e=>(setDate(e.target.value))}
+          
+              <FormControl variant="outlined" className={classes.formControl}>
+              <InputLabel id="demo-simple-select-outlined-label">Blood Group</InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                label="Blood Group"
+                required={true}
+                onChange={e=>(setBloodGroup(e.target.value))}
                 margin="normal"
-            />
-            <Button type='submit' buttonStyle='button--outlined' buttonColor='primary' type='submit'>Submit</Button>
+              >
+                  <MenuItem value="-1">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value="A+">A+</MenuItem>
+                  <MenuItem value="A-">A-</MenuItem>
+                  <MenuItem value="B+">B+</MenuItem>
+                  <MenuItem value="O+">O+</MenuItem>
+                  <MenuItem value="O-">O-</MenuItem>
+                  <MenuItem value="AB+">AB+</MenuItem>
+                  <MenuItem value="AB-">AB-</MenuItem>
+                </Select>
+              </FormControl>
+              <TextField
+                  id="date_negative"
+                  type="date"
+                  label="Date last negative"
+                  defaultValue="2017-05-24"
+                  InputLabelProps={{
+                  shrink: true,
+                  }}
+                  onChange={e=>(setDate(e.target.value))}
+                  margin="normal"
+              />
+
+              <Button type='submit' buttonStyle='button--outlined' buttonColor='primary' type='submit'>Submit</Button>
           </form>
         </div>
+
         <div className="Report">
       
           <div {...getRootProps()}>
