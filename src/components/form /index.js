@@ -104,16 +104,16 @@ export default function Form() {
             />
 
         
-<FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-outlined-label">Blood Group</InputLabel>
-        <Select
-          labelId="demo-simple-select-outlined-label"
-          id="demo-simple-select-outlined"
-          label="Blood Group"
-          required={true}
-          onChange={e=>(setBloodGroup(e.target.value))}
-          margin="normal"
-        >
+      <FormControl variant="outlined" className={classes.formControl}>
+      <InputLabel id="demo-simple-select-outlined-label">Blood Group</InputLabel>
+      <Select
+        labelId="demo-simple-select-outlined-label"
+        id="demo-simple-select-outlined"
+        label="Blood Group"
+        required={true}
+        onChange={e=>(setBloodGroup(e.target.value))}
+        margin="normal"
+      >
           <MenuItem value="-1">
             <em>None</em>
           </MenuItem>
@@ -138,10 +138,10 @@ export default function Form() {
                 margin="normal"
             />
             <Button type='submit' buttonStyle='button--outlined' buttonColor='primary' type='submit'>Submit</Button>
-            </form>
-            </div>
-          <div className="Report">
-          
+          </form>
+        </div>
+        <div className="Report">
+      
           <div {...getRootProps()}>
           <label htmlFor='reportFiles'>Attach negative report/discharge report</label>
             <input {...getInputProps()} id='reportFiles' />
